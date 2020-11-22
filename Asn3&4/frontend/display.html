@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+    	<meta charset="utf-8">
+		<title>Display Rectangles</title>
+
+		<link rel="stylesheet" href="./css/style.css"/>
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar navbar-light justify-content-between sticky-top" style="background-color: #e3f2fd;">
+		  <div class="form-inline">
+	        <a class="navbar-brand" href="http://localhost:3000">Rectangular Demo</a>
+		  	<a class="navbar-brand font-weight-bold" href="http://localhost:3000/display">Display</a>
+		  	<a class="navbar-brand" href="http://localhost:3000/add">Add</a>
+		  	<a class="navbar-brand" href="http://localhost:3000/edit">Edit</a>
+		  </div>
+		  <form class="form-inline">
+		    <input id="deleteId"class="form-control mr-sm-2" type="search" placeholder="Enter Rectangular #">
+		    <button id="delButton" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Delete</button>
+		  </form>
+		</nav>
+		
+		<div id="alert" class="alert" role="alert">
+		</div>
+
+		<div id="recDisplay">
+<!-- 			<svg width="400" height="200">
+			  <rect width="400" height="200" fill="blue"/>
+			Sorry, your browser does not support inline SVG.
+			</svg> 	 -->	
+		</div>
+
+		
+
+
+		<script type="text/javascript" src="./js/scriptDisplay.js"></script>
+	</body>
+</html>	
