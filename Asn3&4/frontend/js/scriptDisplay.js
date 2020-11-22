@@ -1,5 +1,5 @@
 const recDisplay = document.getElementById('recDisplay');	
-const request = new Request('http://localhost:3000/displayRectangles');
+const request = new Request('http://localhost:8080/displayRectangles');
 var deleteId = document.getElementById('deleteId');
 var delButton = document.getElementById('delButton');
 var alert = document.getElementById('alert');
@@ -39,7 +39,7 @@ function triggerDelete() {
 		id: deleteId.value
 	};
 	var xhr = new XMLHttpRequest();
-    xhr.open("DELETE", "http://localhost:3000/display", true);
+    xhr.open("DELETE", "http://localhost:8080/display", true);
    	xhr.setRequestHeader('Content-Type', 'application/json');
    	xhr.send(JSON.stringify(id));
    	xhr.onload = function () {

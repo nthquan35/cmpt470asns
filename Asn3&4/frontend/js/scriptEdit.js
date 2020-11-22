@@ -54,11 +54,13 @@ function submitEditForm(event){
 						alert.innerHTML = "One or more components has changed.";
 						alert.className += " alert-success";
 						fade(alert);
+						setTimeout(location.reload.bind(location), 2000);
 					}
 					else {
 						alert.innerHTML = `ID ${id.value} is invalid.`;
 						alert.className += " alert-warning";
 						fade(alert);
+						setTimeout(location.reload.bind(location), 2000);
 					}
 				}
 			}

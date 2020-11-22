@@ -9,7 +9,7 @@ app.use(cors());
 
 
 var con = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "localhost",
   user: "root",
   password: "Bolshevik35+",
   database: "cmpt470"
@@ -134,7 +134,7 @@ app.post('/edit', function(req, res){
 	// console.log(height);
 })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`);
 });
