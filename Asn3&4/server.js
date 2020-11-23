@@ -9,7 +9,7 @@ app.use(cors());
 
 
 var con = mysql.createConnection({
-  host: "35.239.147.62",
+  host: "10.128.0.6",
   user: "root",
   password: "Bolshevik35+",
   database: "cmpt470"
