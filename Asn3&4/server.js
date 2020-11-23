@@ -9,18 +9,19 @@ app.use(cors());
 
 
 var con = mysql.createConnection({
-  host: "localhost",
+  host: "35.239.147.62",
   user: "root",
   password: "Bolshevik35+",
   database: "cmpt470"
 });
 
-// con.connect(function(err) {
-// 	if (err) {
-// 		return console.error('error: ' + err.message);
-// 	}
-// 	console.log("Connected!");
-// });
+con.connect(function(err) {
+	if (err) {
+		return console.error('error: ' + err.message);
+	}
+	console.log("Connected!");
+});
+
 var options = {
   dotfiles: 'ignore',
   etag: false,
