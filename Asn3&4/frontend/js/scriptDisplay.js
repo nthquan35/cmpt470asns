@@ -44,18 +44,20 @@ function triggerDelete() {
    	xhr.send(JSON.stringify(id));
    	xhr.onload = function () {
 	   	if (xhr.status == 200){
-  			var response = JSON.parse(xhr.responseText);
-  			if (response === "Deleted"){
-  				setTimeout(location.reload.bind(location), 0); 	
-  			}
-  			else{
-  				alert.innerHTML = `${deleteId.value} is not found.`;
-  				alert.className += " alert-warning";
-  				fade(alert);
-  			}	
+			var response = JSON.parse(xhr.responseText);
+			if (response === "Deleted"){
+				setTimeout(location.reload.bind(location), 0); 	
+			}
+			else{
+				alert.innerHTML = `${deleteId.value} is not found.`;
+				alert.className += " alert-warning";
+				fade(alert);
+			}	
 	    }  
 	};
 }
+
+
 
 function fade(element) {
     var op = 1;  // initial opacity
