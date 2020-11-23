@@ -1,5 +1,5 @@
 const recDisplay = document.getElementById('recDisplay');	
-const request = new Request('http://34.121.160.108/displayRectangles');
+const request = new Request('http://10.128.0.4/displayRectangles');
 var deleteId = document.getElementById('deleteId');
 var delButton = document.getElementById('delButton');
 var alert = document.getElementById('alert');
@@ -39,25 +39,23 @@ function triggerDelete() {
 		id: deleteId.value
 	};
 	var xhr = new XMLHttpRequest();
-    xhr.open("DELETE", "http://34.121.160.108/display", true);
+    xhr.open("DELETE", "http://10.128.0.4/display", true);
    	xhr.setRequestHeader('Content-Type', 'application/json');
    	xhr.send(JSON.stringify(id));
    	xhr.onload = function () {
 	   	if (xhr.status == 200){
-			var response = JSON.parse(xhr.responseText);
-			if (response === "Deleted"){
-				setTimeout(location.reload.bind(location), 0); 	
-			}
-			else{
-				alert.innerHTML = `${deleteId.value} is not found.`;
-				alert.className += " alert-warning";
-				fade(alert);
-			}	
+  			var response = JSON.parse(xhr.responseText);
+  			if (response === "Deleted"){
+  				setTimeout(location.reload.bind(location), 0); 	
+  			}
+  			else{
+  				alert.innerHTML = `${deleteId.value} is not found.`;
+  				alert.className += " alert-warning";
+  				fade(alert);
+  			}	
 	    }  
 	};
 }
-
-
 
 function fade(element) {
     var op = 1;  // initial opacity
